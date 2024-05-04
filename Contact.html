@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+  </header>
+  <main>
+    <section id="contact-form">
+      <h2>Get in Touch</h2>
+      <form action="submit_form.php" method="POST">
+        <div class="input-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="input-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="input-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Blind Man Assistance</p>
+  </footer>
+</body>
+</html>

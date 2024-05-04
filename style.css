@@ -1,0 +1,32 @@
+#container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+   
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#startButton {
+    display: inline-block;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+#startButton:hover {
+    background: linear-gradient(to right, #8f94fb, #4e54c8);
+}
+#output {
+    margin-top: 20px;
+    text-align: left;
+}
+.question {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.answer {
+    margin-left: 20px;
+}

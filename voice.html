@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Voice-Activated Options</title>
+</head>
+<body>
+  <div id="optionsDiv">
+    <p>Speak the number corresponding to your choice:</p>
+    <p>1. Main Page 1</p>
+    <p>2. Quiz 2</p>
+    <p>3. Calculator 3</p>
+    <p>4. Community 4</p>
+  </div>
+
+  <script>
+    // Function to handle voice input
+    function handleVoiceInput(event) {
+      const spokenText = event.results[0][0].transcript.trim();
+      const spokenNumber = parseInt(spokenText);
+
+      // Check if the spoken text is a valid number
+      if (!isNaN(spokenNumber) && spokenNumber >= 1 && spokenNumber <= 4) {
+        // Redirect to the corresponding page
+        window.location.href = `page${spokenNumber}.html`;
+      } else {
+        // Invalid input, ask the user to try again
+        alert("Invalid input! Please speak a number between 1 and 4.");
+      }
+    }
+
+    // Initialize speech recognition
+    const recognition = new webkitSpeechRecognition();
+    recognition.continuous = false;
+    recognition.lang = 'en-US';
+
+    // Event listener for speech recognition results
+    recognition.onresult = function(event) {
+      handleVoiceInput(event);
+    }
+
+    // Start speech recognition on page load
+    recognition.start();
+  </script>
+</body>
+</html>
